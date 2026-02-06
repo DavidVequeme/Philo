@@ -63,7 +63,21 @@ typedef struct s_data
 
 
 
+void    free_all(t_data *data);
+long    ft_atol(char *s);
+void    *ft_calloc(size_t num, size_t tam);
+long    ft_get_time(void);
+void    accurate_sleep(long time, t_mutex_man *mutex);
+int     check_dead(t_mutex_man *mutex);
+bool    create_mutex(t_data *data);
+void    create_philo(t_data *data);
+void    create(t_data *data);
+void    philo_eat(t_philo *philo);
+void    philo_think(t_philo *philo);
+void    philo_sleep(t_philo *philo);
+void    print_philo(char *str, t_philo *philo);
+void    *routine(void *p);
+bool    invalid_input(char **av);
 
-bool invalid_input(char **av);
 
 #endif

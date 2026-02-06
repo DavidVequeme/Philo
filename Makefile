@@ -1,7 +1,10 @@
 NAME := philo
 
-SRC :=	philosophers.c \
-		parsing.c 
+SRC :=	philo_helpers.c \
+		philo_create.c \
+		philo_actions.c \
+		philosophers.c \
+		parsing.c \
 
 HDR_DIR := .
 
