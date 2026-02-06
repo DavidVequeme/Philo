@@ -18,9 +18,9 @@ typedef struct s_params
 {
     long t_die;
     long start_time;
+    long t_sleep;
+    long t_eat;
     int n_philo;
-    int t_eat;
-    int t_sleep;
     int n_teat;
 
 } t_params;
@@ -28,13 +28,11 @@ typedef struct s_params
 
 typedef struct s_mutex_man
 {
-
     pthread_mutex_t *forks;
     pthread_mutex_t *philo_lock;
     pthread_mutex_t printf_lock;
     pthread_mutex_t end_lock;
     bool end_flag;
-    
 
 } t_mutex_man;
 
