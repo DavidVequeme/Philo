@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 22:03:42 by david             #+#    #+#             */
-/*   Updated: 2026/02/06 22:05:36 by david            ###   ########.fr       */
+/*   Updated: 2026/02/08 17:41:12 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,12 +61,16 @@ int	check_dead(t_mutex_man *mutex)
 void accurate_sleep(long time, t_mutex_man *mutex)
 {
     long start;
+    long i;
     
     start = ft_get_time();
-    while (time > (ft_get_time() - start))
+    while (1)
     {
         if (check_dead(mutex))
             break;
-        usleep(500);   
+        i = ft_get_time() - start;
+        if (i >= time)
+            break ;
+        usleep(1000);   
     }
 }

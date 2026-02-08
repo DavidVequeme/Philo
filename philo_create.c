@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 22:06:55 by david             #+#    #+#             */
-/*   Updated: 2026/02/06 23:06:10 by david            ###   ########.fr       */
+/*   Updated: 2026/02/07 00:11:45 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,8 @@ void create_philo(t_data *data)
         data->philo[i].id = i + 1;
         data->philo[i].params = data->params; 
         data->philo[i].mutex_man = &data->mutex_man;
-        data->philo->last_eat = ft_get_time();
+        data->philo[i].tou_cheio = false;
+        data->philo[i].last_eat = ft_get_time();
         pthread_create(&data->philo[i].thread, NULL, &routine, &data->philo[i]);
         i++;
     }

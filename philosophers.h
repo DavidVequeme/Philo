@@ -47,6 +47,7 @@ typedef struct s_philo
     long last_eat;
     int id;
     int count_eat;
+    bool tou_cheio;
     
 } t_philo;    
 
