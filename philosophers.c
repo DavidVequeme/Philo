@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 14:09:47 by david             #+#    #+#             */
-/*   Updated: 2026/02/08 17:14:22 by david            ###   ########.fr       */
+/*   Updated: 2026/02/08 18:23:40 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,22 +62,22 @@ void free_all(t_data *data)
     free(data->mutex_man.philo_lock);
 }
 
-bool colhao_esquerdo_do_timoty(t_data *data)
+bool check_time_to_die(t_data *data)
 {
     int i;
-    
+ 
     i = 0;
     while(i < data->params.n_philo)
     {
         pthread_mutex_lock(&data->mutex_man.philo_lock[i]);
-        if ((ft_get_time() - data->philo[i].last_eat) > data->params.t_die)
+        if ((ft_get_time() - data->philo[i].last_eat ) >= data->params.t_die)
         {
             pthread_mutex_lock(&data->mutex_man.end_lock);
             data->mutex_man.end_flag = true;
             pthread_mutex_unlock(&data->mutex_man.end_lock);
             pthread_mutex_unlock(&data->mutex_man.philo_lock[i]);
             pthread_mutex_lock(&data->mutex_man.printf_lock);
-            printf("\nMORRRERAM TODOS!!!\n");
+            printf("%ld %d died\n", ft_get_time() - data->params.start_time, data->philo[i].id);
             pthread_mutex_unlock(&data->mutex_man.printf_lock);
             return (false);
         }
@@ -87,7 +87,7 @@ bool colhao_esquerdo_do_timoty(t_data *data)
     return(true);
 }
 
-bool colhao_direito_do_timoty(t_data *data)
+bool check_is_full(t_data *data)
 {
     int i;
     int check;
@@ -114,12 +114,13 @@ bool colhao_direito_do_timoty(t_data *data)
     return(true);
 }
 
-void timoty(t_data *data)
+void check_end(t_data *data)
 {
     while(1)
     {
-        if (!colhao_esquerdo_do_timoty(data) || !colhao_direito_do_timoty(data))
+        if (!check_time_to_die(data) || !check_is_full(data))
             break;
+        usleep(1000);
     }
 }
 
@@ -128,20 +129,16 @@ int main(int ac, char **av)
     if (ac == 5 || ac == 6)
     {
         t_data data;
-
+        int i;
         memset(&data, 0, sizeof (t_data));
-        // memset(&data.params, 0, sizeof (t_params));
-        // memset(&data.mutex_man, 0, sizeof (t_mutex_man));
-    
         if(!invalid_input(av))
             return(1);
         init(&data.params, ac, av);
 
         create(&data);
-        int i;
-
+        usleep(100);
         i = 0;
-        timoty(&data);
+        check_end(&data);
         while(i < data.params.n_philo)
         {
             pthread_join(data.philo[i].thread, NULL);
