@@ -21,6 +21,11 @@ The challenge is to prevent philosophers from starving while waiting to eat.
 ```bash
 make 
 ```
+
+### Usage :
+```bash
+./philo number_of_philosophers time_to_die time_to_eat time_to_sleep [number_of_repeats]
+```
 Parameters :
 
 - `number_of_philosophers`: Number of philosophers
