@@ -22,11 +22,7 @@ The challenge is to prevent philosophers from starving while waiting to eat.
 make 
 ```
 
-### Usage :
-```bash
-./philo number_of_philosophers time_to_die time_to_eat time_to_sleep [number_of_repeats]
-```
-Parameters :
+### Parameters :
 
 - `number_of_philosophers`: Number of philosophers
 - `time_to_die`: Time a philosopher can go without eating before dying
@@ -34,10 +30,13 @@ Parameters :
 - `time_to_sleep`: Time a philosopher spends sleeping
 - `number_of_times_each_philosopher_must_eat`: (Optional) Number of times each philosopher must eat
 
-**Resources**
+### Usage :
+```bash
+./philo number_of_philosophers time_to_die time_to_eat time_to_sleep [number_of_repeats]
+```
+- - - - - - -
 
-For this project i used a playlist from code vault on how to manipulate threads.
-
-Link: https://www.youtube.com/watch?v=d9s_d28yJq0&list=PLfqABt5AS4FmuQf70psXrsMLEDQXNkLq2
-
+## Resources
+- [Dining Philosophers problem - Wikipedia](https://www.youtube.com/watch?v=d9s_d28yJq0&list=PLfqABt5AS4FmuQf70psXrsMLEDQXNkLq2)
+- [Unix Threads in C](https://en.wikipedia.org/wiki/Dining_philosophers_problem)
 I used AI in this project to help resolve some errors that I couldn’t fix on my own.
