@@ -23,15 +23,16 @@ make
 ```
 Parameters :
 
-number_of_philosophers: Number of philosophers
-time_to_die: Time a philosopher can go without eating before dying
-time_to_eat: Time it takes for a philosopher to eat
-time_to_sleep: Time a philosopher spends sleeping
-number_of_times_each_philosopher_must_eat: (Optional) Number of times each philosopher must eat
+- `number_of_philosophers`: Number of philosophers
+- `time_to_die`: Time a philosopher can go without eating before dying
+- `time_to_eat`: Time it takes for a philosopher to eat
+- `time_to_sleep`: Time a philosopher spends sleeping
+- `number_of_times_each_philosopher_must_eat`: (Optional) Number of times each philosopher must eat
 
 **Resources**
 
 For this project i used a playlist from code vault on how to manipulate threads.
+
 Link: https://www.youtube.com/watch?v=d9s_d28yJq0&list=PLfqABt5AS4FmuQf70psXrsMLEDQXNkLq2
 
 I used AI in this project to help resolve some errors that I couldn’t fix on my own.
