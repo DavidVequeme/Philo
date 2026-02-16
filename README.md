@@ -17,7 +17,7 @@ The challenge is to prevent philosophers from starving while waiting to eat.
 
 ## Instructions
 
-Compilation :
+### Compilation :
 
 Make
 
