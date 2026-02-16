@@ -1,6 +1,6 @@
 *This project has been created as partof the 42 curriculum by dvidal*
 
---Philosophers--
+# Philosophers
 
 ## Description
 
