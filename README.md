@@ -13,13 +13,13 @@ Philosophers have to alternate between three states: eating, sleeping and thinki
 
 The challenge is to prevent philosophers from starving while waiting to eat.
 
+- - - - - - -
+
 **Instructions**
 
 Compilation :
 
 Make
-
-- - - - - - -
 
 Parameters :
 
