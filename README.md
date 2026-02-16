@@ -18,9 +18,9 @@ The challenge is to prevent philosophers from starving while waiting to eat.
 ## Instructions
 
 ### Compilation :
-
-Make
-
+```bash
+make 
+```
 Parameters :
 
 number_of_philosophers: Number of philosophers
