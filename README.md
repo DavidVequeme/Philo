@@ -2,7 +2,7 @@
 
 --Philosophers--
 
-**Description**
+## Description
 
 The Philosophers is project that simulates the famous dining philosophers problem, proposed by Edsger Dijkstra.
 The goal is to learn and implement fundamental concepts of threads, mutexes, and process synchronization.
@@ -15,7 +15,7 @@ The challenge is to prevent philosophers from starving while waiting to eat.
 
 - - - - - - -
 
-**Instructions**
+## Instructions
 
 Compilation :
 
