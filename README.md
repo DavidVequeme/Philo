@@ -39,4 +39,7 @@ make
 ## Resources
 - [Dining Philosophers problem - Wikipedia](https://www.youtube.com/watch?v=d9s_d28yJq0&list=PLfqABt5AS4FmuQf70psXrsMLEDQXNkLq2)
 - [Unix Threads in C](https://en.wikipedia.org/wiki/Dining_philosophers_problem)
+
+### AI usage
+
 I used AI in this project to help resolve some errors that I couldn’t fix on my own.
